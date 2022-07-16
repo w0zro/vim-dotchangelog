@@ -1,0 +1,27 @@
+*dotchangelog.txt* edit your .changelog file quick
+
+
+    .o88b. db   db  .d8b.  d8b   db  d888b  d88888b db       .d88b.   d888b   ~
+   d8P  Y8 88   88 d8' `8b 888o  88 88' Y8b 88'     88      .8P  Y8. 88' Y8b  ~
+   8P      88ooo88 88ooo88 88V8o 88 88      88ooooo 88      88    88 88       ~
+   8b      88~~~88 88~~~88 88 V8o88 88  ooo 88~~~~~ 88      88    88 88  ooo  ~
+db Y8b  d8 88   88 88   88 88  V888 88. ~8~ 88.     88booo. `8b  d8' 88. ~8~  ~
+VP  `Y88P' YP   YP YP   YP VP   V8P  Y888P  Y88888P Y88888P  `Y88P'   Y888P   ~
+
+====================================================================
+Usage                                             *DotChangelogUsage*
+
+This plugin will make it easy to edit your latest .changelog file.
+
+Add the following to your vimrc file before using:
+
+    let g:dotchangelog_name = "your name here"
+    nmap <leader>le :call g:DotChangelogEdit()<cr>
+
+The only function made available is g:DotChangelogEdit(), which will open the
+file ".changelog/<latest version>/ + g:dotchangelog_name + .md" for editing.
+Your changelog file is opened with the cursor on the last line.
+
+If your changelog file does not exist, the plugin will first copy your
+blueprint from ".changelog/.blueprint/ + g:dotchangelog_name + .md" to the
+latest version in the .changelog directory.
